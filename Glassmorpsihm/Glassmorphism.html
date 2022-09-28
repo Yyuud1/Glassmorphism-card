@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh; 
+			background-color: #161623;
+		}
+
+		.container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			box-sizing: border-box;
+		}
+
+		.container .card {
+			width: 280px;
+			height: 400px;
+			margin: 30px;
+			box-shadow: 10px 10px 20px rgba(0, 0, 0, .5);
+			padding: 10px;
+			border-radius: 15px;
+			background-color: rgba(255,255,255, .1);
+			overflow: hidden;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-top: 2px solid rgba(255,255,255,.3);
+			border-left: 2px solid rgba(255,255,255,.3);
+		}
+
+		.container .card .content  {
+			transform: translateY(100px);
+			opacity: 0;
+			transition: .5s;
+		}
+
+		.container .card:hover .content {
+			transform: translateY(-50px);
+			opacity: 1;
+		}
+
+		.container .card .content h1  {
+			color: #fff;
+		}
+
+		.container .card .content p {
+			color: #ddd;
+		}
+
+		.container .card .content a {
+			text-decoration: none;
+			margin-top: 20px;
+			color: #111;
+			border-radius: 15px;
+			padding: 10px;
+			background-color: #fff;
+			font-weight: bold;
+			display: inline-block;
+			margin-top: 10px;
+			box-shadow: 0 10px 15px rgba(0, 0, 0, .3);
+			font-family: arial;
+			letter-spacing: 1px;
+		}
+
+		.dot1{
+			position: absolute;
+			top: -150px;
+			left: -150px;
+			background: linear-gradient(to right, blueviolet, red);
+			width: 600px;
+			height: 600px;
+			z-index: -100;
+			border-radius: 50% 50% 50% 50%;
+		}
+		.dot2 {
+			position: absolute;
+			bottom: 0px;
+			right: 0px;
+			background: linear-gradient(to right, blue,royalblue);
+			width: 400px;
+			height: 400px;
+			z-index: -100;
+			border-radius: 50% 50% 50% 50%;
+		}
+	</style>
+</head>
+<body>
+	<div class="bg-dot">
+		<div class="dot1"></div>
+		<div class="dot2"></div>
+	</div>
+
+	<div class="container">
+		<div class="card">
+			<div class="content">
+				<h1>Hallo</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat..</p>
+				<a href="#">Read More</a>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="content">
+				<h1>Saya</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat..</p>
+				<a href="#">Read More</a>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="content">
+				<h1>Yuda Anugrah</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat..</p>
+				<a href="#">Read More</a>
+			</div>
+		</div>
+
+	</div>
+
+	<script type="text/javascript" src="script.js">
+	</script>
+
+	<script>
+		VanillaTilt.init(document.querySelectorAll(".card"),{
+		max: 25,
+		speed: 400,
+		glare: true,
+		"max-glare": 1,
+	});
+	</script>
+</body>
+</html>

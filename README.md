@@ -1,3 +1,3 @@
 ## Glassmorphism-card
-card with design Glassmorphism
+card with Glassmorphism design 
 Try it : <a href="https://glassmorphismCard.yudaaanugrah.repl.co">Glassmorphism-card.co</a>
